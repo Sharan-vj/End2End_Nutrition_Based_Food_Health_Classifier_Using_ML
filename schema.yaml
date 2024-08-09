@@ -1,0 +1,12 @@
+COLUMNS:
+  additives_n : float
+  fat_100g : float
+  saturated-fat_100g : float
+  carbohydrates_100g : float
+  sugars_100g : float
+  fiber_100g : float
+  proteins_100g : float
+  sodium_100g : float
+
+TARGET_COLUMN:
+  name: healthy_label
