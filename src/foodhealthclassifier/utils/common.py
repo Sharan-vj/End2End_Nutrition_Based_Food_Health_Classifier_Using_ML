@@ -5,7 +5,7 @@ import joblib
 from typing import Any
 from pathlib import Path
 from box import ConfigBox
-from foodhealthclassifier import logger
+from foodhealthclassifier.logging import logger
 
 
 def yaml_reader(filepath: Path, log: True) -> ConfigBox:
