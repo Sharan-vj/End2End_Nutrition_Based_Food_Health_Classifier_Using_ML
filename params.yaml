@@ -1,6 +1,6 @@
 LogisticRegression:
   C: 1
   l1_ratio: 0.1
-  max_iter: 100
-  penalty: l2
-  solver: lbfgs
+  max_iter: 500
+  penalty: elasticnet
+  solver: saga
