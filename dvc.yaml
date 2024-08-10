@@ -5,28 +5,35 @@ stages:
       - src/foodhealthclassifier/pipeline/stage_01_data_ingestion.py
       - config/config.yaml
     outs:
-      - artifacts/data_ingestion
+      - artifacts/data_ingestion/data.zip
+      - artifacts/data_ingestion/nutrients.csv
+      
 
   data_validation:
     cmd: python src/foodhealthclassifier/pipeline/stage_02_data_validation.py
     deps:
       - src/foodhealthclassifier/pipeline/stage_02_data_validation.py
       - config/config.yaml
+      - artifacts/data_ingestion/nutrients.csv
     outs:
-      - artifacts/data_validation
+      - artifacts/data_validation/status.txt
 
   data_transformation:
     cmd: python src/foodhealthclassifier/pipeline/stage_03_data_transformation.py
     deps:
       - src/foodhealthclassifier/pipeline/stage_03_data_transformation.py
       - config/config.yaml
+      - artifacts/data_ingestion/nutrients.csv
     outs:
-      - artifacts/data_transformation
+      - artifacts/data_transformation/train.csv
+      - artifacts/data_transformation/test.csv
 
   model_trainer:
     cmd: python src/foodhealthclassifier/pipeline/stage_04_model_trainer.py
     deps: 
       - src/foodhealthclassifier/pipeline/stage_04_model_trainer.py
       - config/config.yaml
+      - artifacts/data_transformation/train.csv
+      - artifacts/data_transformation/test.csv
     outs:
       - artifacts/model_trainer/foodhealth_classifier.pkl
