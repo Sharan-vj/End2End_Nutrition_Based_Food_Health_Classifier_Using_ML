@@ -5,6 +5,7 @@
 This project focuses on developing a machine learning model that classifies food items based on their nutritional content per 100g, determining whether they are healthy or not. By analyzing key nutritional factors such as fat, saturated fat, carbohydrates, sugars, fiber, proteins, and sodium, the model predicts the healthiness of food items. The primary objective is to assist users in making informed dietary choices by leveraging AI to provide instant feedback on the nutritional quality of food.
 </p>
 
+### ScreenShot
 <img width="800" height="400" align="center" src="/screenshots/test_image.png">
 
 ### Technologies Used in This Project
