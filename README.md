@@ -24,7 +24,7 @@ This project focuses on developing a machine learning model that classifies food
 1. **Clone the Repository**:
     ```bash
     git clone https://github.com/Sharan-vj/End2End_Nutrition_Based_Food_Health_Classifier_Using_ML.git
-    cd End2End_Nutrition_Based_Food_Health_Classifier_Using_ML.git
+    cd End2End_Nutrition_Based_Food_Health_Classifier_Using_ML
     ```
 
 2. **Create a Virtual Environment**:
